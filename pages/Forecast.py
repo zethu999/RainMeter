@@ -9,7 +9,7 @@ st.set_page_config(layout="wide")
 st.title("Overall Stats")
 @st.cache_data
 def read_data():
-    data = pd.read_csv("E:\Projects\RainMeter\weatherAUS.csv")
+    data = pd.read_csv("weatherAUS.csv")
     data['Date'] = pd.to_datetime(data['Date'])
     data['year'] = data['Date'].dt.year
     data['month'] = data['Date'].dt.month
